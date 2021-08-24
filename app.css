@@ -3,6 +3,11 @@
   color: #fe875c;
 }
 
+.id {
+  color: #fe875c;
+  margin-right: 0.5rem;
+}
+
 .margin-top-big {
   margin-top: 7rem;
 }
@@ -92,7 +97,6 @@ body::after {
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.1rem;
-  padding-top: 5rem;
   text-shadow: 0.3rem 0 0.3rem rgba(255, 255, 255, 0.7);
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -174,10 +178,74 @@ body::after {
 
 .form__input:focus {
   outline: 0;
+  border-bottom: 0.2rem solid #000000;
 }
 
 .form__input:focus::-webkit-input-placeholder {
   color: #fe875c;
+}
+
+.form__input:focus:invalid {
+  outline: none;
+  border-bottom: 0.2rem solid #fe875c;
+}
+
+.form__input:not(output):-moz-ui-invalid {
+  box-shadow: none;
+}
+
+.tasks {
+  width: 70%;
+}
+
+.tasks__list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tasks__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.2rem 1.4rem;
+  border-radius: 3rem;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0.4rem -0.4rem 0.3rem rgba(255, 255, 255, 0.5);
+          box-shadow: 0.4rem -0.4rem 0.3rem rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.tasks__item:not(:last-child) {
+  margin-bottom: 1.2rem;
+}
+
+.tasks__item:hover {
+  -webkit-transform: translateY(-0.3rem);
+          transform: translateY(-0.3rem);
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-box-shadow: 0.5rem -0.2rem 0.2rem rgba(255, 255, 255, 0.6);
+          box-shadow: 0.5rem -0.2rem 0.2rem rgba(255, 255, 255, 0.6);
+}
+
+.tasks__link {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-left: auto;
+  text-decoration: none;
+  color: inherit;
 }
 
 .btn {
@@ -190,6 +258,7 @@ body::after {
   border-radius: 1.6rem;
   border: 0.2rem solid #e5e5e5;
   border-bottom: 0.6rem solid #e5e5e5;
+  background-color: #ffffff;
   margin: 2rem 0;
   padding: 1.2rem 1.6rem;
   -webkit-transition: all 0.1s ease;
@@ -199,8 +268,9 @@ body::after {
 }
 
 .btn--addTask:hover {
-  background-color: #ddf4ff;
-  border-color: #1cb0f6;
+  color: #ffffff;
+  background-color: #1cb0f6;
+  border-color: #fe875c;
 }
 
 .btn--addTask:active {
