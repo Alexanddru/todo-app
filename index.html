@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Probably headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="app.css" />
+    <title>Things \\</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading-primary">
+        List of things that'll be
+        <span class="highlight-single-word">ignored</span>
+      </h1>
+
+      <!-- Fields to add item -->
+      <div class="card margin-top-medium">
+        <div class="card__header">
+          <h2 class="heading-tertiary">Add an item to its final destination</h2>
+        </div>
+        <div class="card__body">
+          <form action="#" class="form">
+            <!-- Task  -->
+            <div class="form__control">
+              <label for="task" class="form__label">Add task</label>
+              <input
+                type="text"
+                id="task"
+                placeholder="Please add a task to be ignored..."
+                class="form__input"
+              />
+            </div>
+            <!-- Task -->
+            <button class="btn btn--addTask">Add task</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Scrips -->
+    <script src="app.js"></script>
+  </body>
+</html>
